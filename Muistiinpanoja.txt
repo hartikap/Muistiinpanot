@@ -1,2 +1,48 @@
 Muistiinpanot, Ohjelmistokehitys
+---------------------------------
 
+
+21.10.2015 -Tietokannat: mongodb
+-----------
+
+Mongo:
+
+- mongo.exe on javascript -shell eli se tunnistaa java-koodia ja suorittaa sitä
+mongon omien komentojen lisäksi.
+	- ctrl+c -komennolla pääsee keskeneräisestä javascript komennosta pois
+	- shell voi ajaa myös script-tiedostoja
+Näytä tietokannat: show dbs
+Uusi tietokanta: use *kannan nimi*
+Käytä vanhaa tietokantaa: use *olemassaolevan kannan nimi*
+show collections
+-------------
+C = create
+R = read
+U = update
+D = Delete
+--------------
+db.*collection name*.find(); // Hae tiedot kannasta
+db.*collection name*.find().pretty(); // Hae tiedot kannasta ja tulosta nätisti
+db.*collection name*.find({*field* : *haluttu arvo*}).pretty(); // Hae objektit 
+						joiden *field*-attribuutti on 
+						*haluttu arvo* ja tulosta nätisti
+esim: db.person.find({age : 20, name : "Pekka"}).pretty();
+
+Documentin lisäys collectioniin:
+var temp = { 
+	name: "Pertti Keinonen",
+	address: "Manalantie 666",
+	age: "200"
+}; // nämä fieldit on löydyttävä ko. collectionista, järjestyksellä ei väliä
+db.person.insert(temp);
+
+Poisto:
+db.person.remove({*field*: *haluttu arvo*});
+esim. db.person.remove({nimi: "Jaska"});
+
+Päivitys (tai uuden fieldin lisäys):
+https://docs.mongodb.org/manual/reference/method/db.collection.update/
+esim.
+var query_object = { name: "Pekka" };
+var update_object = { address: "Geekway 1" };
+db.person.update(query_object,{$set: update_object});
