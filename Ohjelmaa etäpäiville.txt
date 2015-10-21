@@ -1,0 +1,5 @@
+1. Harjoittele
+- MongoDB:n käyttöä
+- gitin käyttöä
+
+2. Projektisuunnitelman runko

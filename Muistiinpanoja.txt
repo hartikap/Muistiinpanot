@@ -2,8 +2,10 @@ Muistiinpanot, Ohjelmistokehitys
 ---------------------------------
 
 
-21.10.2015 -Tietokannat: mongodb
+21.10.2015 - Versionhallinta kertaus, Tietokannat(mongodb), HTML, CSS, JS
 -----------
+
+git clone url
 
 Mongo:
 
@@ -46,3 +48,39 @@ esim.
 var query_object = { name: "Pekka" };
 var update_object = { address: "Geekway 1" };
 db.person.update(query_object,{$set: update_object});
+
+--------------------------------------------------------------------------------
+
+
+Web page -koodaus
+------------------
+
+Editori: brackets
+
+----MVC-----
+Model
+View
+Controller
+------------
+
+HTML-elementit:
+html - head - body:
+<html> 		//parent-elementti
+    <head> 	//child-elementti (tänne tulee metatietoa)
+    </head>
+    <body> 	//child-elementti (tämä näkyy käyttäjälle selaimessa)
+    </body>
+</html>
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+
+<input type="datetime"/> // HTML5-> input, näitä tyyppejä on erilaisia ks dokumentaatio
+
+- Päättävän tägin vaativat elementit joihin tulee jotain sisältöä 
+vrt:
+<link href="/css/styles.css" type="text/css" rel="stylesheet">
+<p>Hello earth habitants!</p>
+
+
+
+
+

@@ -1,0 +1,13 @@
+internet of things:
+tyyliin: http://synth.media.mit.edu/patchwerk/
+- Pääsisi käyttämään myös HW-osaamista
+- RasPi?
+
+jatkokehitys tästä: Jam Room
+- nettipohjaisella liittymällä eri elektronisten soittimien miksaus
+yhteen, voi soittaa tyyppien kans ympäri maailman (inputteja midistä yms)
+
+TAI
+valokuva-portfolio
+- kuvien arviointi samaan? (1-5 tähteä tms ja kaikkien annettujen tähtien keskiarvo)
+- Yhteydenotto-lomake
