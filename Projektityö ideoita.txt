@@ -1,13 +1,14 @@
 internet of things:
 tyyliin: http://synth.media.mit.edu/patchwerk/
-- P‰‰sisi k‰ytt‰m‰‰n myˆs HW-osaamista
-- RasPi?
+- P√§√§sisi k√§ytt√§m√§√§n my√∂s HW-osaamista
+- RasPi palvelimena johon kytketty arduino(tai raspin pinneihin suoraan hw. Pystyyk√∂ 
+Raspi dac-munnokseen suoraan?)
 
-jatkokehitys t‰st‰: Jam Room
-- nettipohjaisella liittym‰ll‰ eri elektronisten soittimien miksaus
-yhteen, voi soittaa tyyppien kans ymp‰ri maailman (inputteja midist‰ yms)
+jatkokehitys t√§st√§: Jam Room
+- nettipohjaisella liittym√§ll√§ eri elektronisten soittimien miksaus
+yhteen, voi soittaa tyyppien kans ymp√§ri maailman (inputteja midist√§ yms)
 
 TAI
 valokuva-portfolio
-- kuvien arviointi samaan? (1-5 t‰hte‰ tms ja kaikkien annettujen t‰htien keskiarvo)
+- kuvien arviointi samaan? (1-5 t√§hte√§ tms ja kaikkien annettujen t√§htien keskiarvo)
 - Yhteydenotto-lomake
