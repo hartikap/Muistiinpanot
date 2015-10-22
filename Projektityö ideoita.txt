@@ -3,6 +3,8 @@ tyyliin: http://synth.media.mit.edu/patchwerk/
 - Pääsisi käyttämään myös HW-osaamista
 - RasPi palvelimena johon kytketty arduino(tai raspin pinneihin suoraan hw. Pystyykö 
 Raspi dac-munnokseen suoraan?)
+- raspi-> spi-> mux-> adc:t -> voltage controls. Tällä tavoin spi:llä ja parilla
+io-pinnillä voidaan ohjata useampaa synan ohjausjännitettä. 
 
 jatkokehitys tästä: Jam Room
 - nettipohjaisella liittymällä eri elektronisten soittimien miksaus
