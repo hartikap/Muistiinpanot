@@ -180,7 +180,7 @@ Middleware\par
 \par
 npm install mongoose --save\par
 -\i Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. {{\field{\*\fldinst{HYPERLINK www.mongoosejs.com/ }}{\fldrslt{www.mongoosejs.com/\ul0\cf0}}}}\f0\fs22\par
-\i0\par
+\b HUOM: --save attribuutti tallentaa ty\'f6kalun projektiin!\b0\i0\par
 var mongoose = require('mongoose');\par
 mongoose.connect('mongodb://localhost/my_database');\par
 (nyt mongod.exe avaus ilman --read ja --jsonp)\par
@@ -193,7 +193,11 @@ PUT: p\'e4ivitet\'e4\'e4n resurssia serverill\'e4\par
 DELETE: poistetaan resurssi serverilt\'e4\par
 \par
 \par
+\ul\b 3.11.2015 HTML Post\ulnone\b0\par
 \par
+<form method="post" enctype = "application/json" action = "/persons">  </form>\par
+\par
+-selain odottaa aina responsea backendist\'e4\par
 \par
 }
  
