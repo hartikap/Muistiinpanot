@@ -204,6 +204,50 @@ DELETE: poistetaan resurssi serverilt\'e4\par
 \par
 Big-data: Hadoop\par
 \par
+\ul\b 11.11.2015\ulnone\b0\par
+\par
+1. UI\par
+2. L\'e4het\'e4 pyynt\'f6 serverille\par
+3. Tee serverille router yll\'e4 olevalle pyynn\'f6lle\par
+4. Tee tietokantaoperaatio\par
+5. L\'e4het\'e4 response\par
+6. Ota response kiinni UI:ssa ja tee sill\'e4 jotakin\par
+\par
+\par
+Documentation for rest API for Persons resource:\par
+\par
+\b Method\tab\tab Context\tab\tab\tab Response\tab\tab Other\b0\par
+GET\tab\tab\tab /\tab\tab\tab index.html\tab\tab (and other related \tab\tab\tab\tab\tab\tab\tab\tab\tab\tab static files\par
+------------------------------------------------------------------------------------------------------------------\par
+GET\tab\tab\tab /persons\tab\tab [\tab\tab\tab Array of [n] person\par
+\tab\tab\tab\tab\tab\tab\tab\{_id,\tab\tab objects\par
+\tab\tab\tab\tab\tab\tab\tab name,\par
+\tab\tab\tab\tab\tab\tab\tab address,\par
+\tab\tab\tab\tab\tab\tab\tab age,\par
+\tab\tab\tab\tab\tab\tab\tab _v\}\tab\par
+\tab\tab\tab\tab\tab\tab ]\tab\tab\tab\par
+------------------------------------------------------------------------------------------------------------------\par
+POST\tab\tab\tab /persons\tab\tab\{name,address,age\}\tab Adds new object to\par
+\tab\tab\tab\tab\tab\tab\tab\tab\tab person collection\par
+------------------------------------------------------------------------------------------------------------------\par
+DELETE\tab\tab\tab /person/id=98xd9fhi\tab "ok" or "fail"\tab\tab id of the person that \tab\tab\tab\tab\tab\tab\tab\tab\tab\tab should be deleted\par
+\tab\tab\tab\tab\tab\tab\tab\tab\tab from the collection\tab\par
+------------------------------------------------------------------------------------------------------------------\par
+PUT\tab\tab\tab /persons\tab\tab\{id,name,address,age\}\tab Updates the person\par
+\tab\tab\tab\tab\tab\tab\tab\tab\tab information in \tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab person-collection\par
+\tab\tab\tab\tab\tab\tab\tab\tab\tab depending of the id\par
+\tab\tab\tab\tab\tab\tab\tab\tab\tab value in object\par
+------------------------------------------------------------------------------------------------------------------\par
+GET\tab\tab\tab /persons/name=john\tab [\tab\tab\tab Array of [n] person\par
+\tab\tab\tab\tab\tab\tab\tab\{_id,\tab\tab objects containing\par
+\tab\tab\tab\tab\tab\tab\tab name,\tab\tab persons whose name\par
+\tab\tab\tab\tab\tab\tab\tab address,\tab starts with the letters\par
+\tab\tab\tab\tab\tab\tab\tab age,\tab\tab given in name attribute\par
+\tab\tab\tab\tab\tab\tab\tab _v\}\tab\par
+\tab\tab\tab\tab\tab\tab ]\par
+\tab\tab\tab\tab\tab\tab\tab\tab\tab\par
+\par
+\par
 \par
 \par
 }
