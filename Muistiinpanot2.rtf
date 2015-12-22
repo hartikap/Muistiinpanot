@@ -271,6 +271,32 @@ ASP.NET\par
 \par
 {{\field{\*\fldinst{HYPERLINK http://www.amazon.com/gp/product/B003YJAZZ4/ref=br_prlt_slcty_pdt-1?ie=UTF8&smid=ATVPDKIKX0DER&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=merchandised-search-top-2&pf_rd_r=0AYSK3VNVYM840H7XEH6&pf_rd_t=101&pf_rd_p=d5f81a02-04be-4835-8382-6c9f84e7f5e7&pf_rd_i=10176794011 }}{\fldrslt{http://www.amazon.com/gp/product/B003YJAZZ4/ref=br_prlt_slcty_pdt-1?ie=UTF8&smid=ATVPDKIKX0DER&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=merchandised-search-top-2&pf_rd_r=0AYSK3VNVYM840H7XEH6&pf_rd_t=101&pf_rd_p=d5f81a02-04be-4835-8382-6c9f84e7f5e7&pf_rd_i=10176794011\ul0\cf0}}}}\f0\fs22\par
 \par
+\b 22.12.2015 Openshift, git\par
+\par
+{{\field{\*\fldinst{HYPERLINK http://stackoverflow.com/questions/12657168/can-i-use-my-existing-git-repo-with-openshift }}{\fldrslt{http://stackoverflow.com/questions/12657168/can-i-use-my-existing-git-repo-with-openshift\ul0\cf0}}}}\f0\fs22  :\par
+\b0 I have the impression that you're not used to use git enough yet. I'd advise you to get into git to fully understand how to push your code to openshift. Nevertheless let me try to explain you the steps involved: As you'd do with git in general, the approach to choose here is to clone your other git repo (ex. on bitbucket) to your local machine:\par
+\par
+git clone <bitbucket-repo-url>\par
+\par
+Your local clone has then your other repo (bitbucket etc.) as remote repo. Your remote repo is stored with the alias "origin" (the default alias used by git if you clone). You then add the openshift repo as remote to your clone. You do that while explicitly using an alias for the remote repo you add - I'm using "openshift" as alias here:\par
+\par
+git remote add openshift -f <openshift-git-repo-url>\par
+\par
+In order to then be able to push the code from your local git repo to openshift you first have to merge your openshift repo with your local bitbucket clone. You do that by issuing locally:\par
+\par
+git merge openshift/master -s recursive -X ours\par
+\par
+With this command you tell git to merge the master branch in the openshift git repo with your local git repo. You tell it to merge using the recursive merging strategy and to choose your ("ours") version when there are conflicts.\par
+\par
+Once the merge is executed you're ready to push your git repo to openshift. You do that by doing:\par
+\par
+git push openshift HEAD\par
+\par
+You tell git to push your local code to the HEAD branch on the remote repo called "openshift" (the alias we stored the openshift git repo at, some paragraphs further up).\par
+\par
+btw. I wrote a jboss tools blog which was demonstrating how to use the openshift-java-client some months ago: {{\field{\*\fldinst{HYPERLINK https://community.jboss.org/wiki/Enable-openshift-ciFullExampleUsingOpenshift-java-client }}{\fldrslt{https://community.jboss.org/wiki/Enable-openshift-ciFullExampleUsingOpenshift-java-client\ul0\cf0}}}}\f0\fs22  . You'll spot the above steps in the last paragraph "We're almost there".\par
+\par
+\par
 \par
 }
  
